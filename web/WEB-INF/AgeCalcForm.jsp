@@ -18,5 +18,6 @@
             <input type="submit" value="submit">
         </form>
         <p>${message}</p>
+        <a href="Calc.jsp">Arithmetic Calculator</a>
     </body>
 </html>

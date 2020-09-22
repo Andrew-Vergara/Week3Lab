@@ -23,11 +23,19 @@ public class AgeCalcServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     
         throws ServletException, IOException{
+        
         String age = request.getParameter("age");
-        request.setAttribute("age",age);
+        
         if(age == null || age.equals("") || age.matches("[-+]?\\d*\\.?\\d+") == false)
         {
             request.setAttribute("message", "You must enter a number.");
+            getServletContext().getRequestDispatcher("/WEB-INF/AgeCalcForm.jsp").forward(request, response);
+        }
+        
+        else
+        {
+            int nextAge = Integer.parseInt(age) + 1;
+            request.setAttribute("message", "Your age next birthday will be " + nextAge);
             getServletContext().getRequestDispatcher("/WEB-INF/AgeCalcForm.jsp").forward(request, response);
         }
     }

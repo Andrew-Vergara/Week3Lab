@@ -23,6 +23,6 @@
             <input type="submit" name="multiply" value="*">
         </form>
             <p>${message}</p>
-            <a href="http://localhost:8084/Week3Lab/agecalc">Age calculator</a>
+            <a href="/Week3Lab/agecalc">Age calculator</a>
     </body>
 </html>

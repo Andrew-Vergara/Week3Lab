@@ -8,6 +8,14 @@
         <servlet-name>AgeCalcServlet</servlet-name>
         <url-pattern>/agecalc</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>CalcServlet</servlet-name>
+        <servlet-class>servlets.CalcServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CalcServlet</servlet-name>
+        <url-pattern>/Calc</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

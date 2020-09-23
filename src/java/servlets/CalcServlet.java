@@ -27,7 +27,7 @@ public class CalcServlet extends HttpServlet {
                 String first = request.getParameter("first");
                 String second = request.getParameter("second");
 
-                if(first == null || first.equals("") || first.matches("[-+]?\\d*\\.?\\d+") == false || second.matches("[-+]?\\d*\\.?\\d+") == false || second == null || second.equals(""))
+                if(first.matches("[-+]?\\d*\\.?\\d+") == false || second.matches("[-+]?\\d*\\.?\\d+") == false)
                 {
                     
                       request.setAttribute("message", "You must enter a number.");
@@ -35,7 +35,7 @@ public class CalcServlet extends HttpServlet {
                 }
                 int firstNum = Integer.parseInt(first);
                    int secondNum = Integer.parseInt(second);
-                    int equals = 0;
+                    int equals;
                 if(request.getParameter("plus")!= null)
                 {
                     equals = firstNum + secondNum;
